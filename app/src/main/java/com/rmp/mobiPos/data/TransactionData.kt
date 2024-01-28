@@ -1,8 +1,10 @@
-package com.rmp.emvnfcdemo.data
+package com.rmp.mobiPos.data
 
 import com.rmp.emvengine.data.Aid
 import com.rmp.emvengine.data.CvmMethod
 import com.rmp.emvengine.data.TransactionDecision
+import com.rmp.mobiPos.data.Amount
+import com.rmp.mobiPos.data.Track2
 
 class TransactionData {
 

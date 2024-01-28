@@ -1,4 +1,4 @@
-package com.rmp.emvnfcdemo
+package com.rmp.mobiPos
 
 
 import org.junit.Test

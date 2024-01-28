@@ -1,4 +1,4 @@
-package com.rmp.emvnfcdemo.data
+package com.rmp.mobiPos.data
 
 enum class TransactionType(val value: String) {
     SALE("SALE")

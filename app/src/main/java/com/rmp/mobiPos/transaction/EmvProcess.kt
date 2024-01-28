@@ -1,7 +1,9 @@
-package com.rmp.emvnfcdemo.transaction
+package com.rmp.mobiPos.transaction
 
 import android.app.Activity
+import android.os.Build
 import android.util.Log
+import androidx.annotation.RequiresApi
 import com.rmp.emvengine.EmvCore
 import com.rmp.emvengine.EmvCoreImpl
 import com.rmp.emvengine.EntryMode
@@ -16,14 +18,14 @@ import com.rmp.emvengine.data.EmvTags
 import com.rmp.emvengine.data.PinEntryStatus
 import com.rmp.emvengine.data.TlvObject
 import com.rmp.emvengine.data.TransactionDecision
-import com.rmp.emvnfcdemo.data.Amount
-import com.rmp.emvnfcdemo.data.Currency
-import com.rmp.emvnfcdemo.data.TransactionData
-import com.rmp.emvnfcdemo.data.TransactionType
-import com.rmp.emvnfcdemo.data.toTrack2
-import com.rmp.emvnfcdemo.transaction.cardreader.CardReaderIpml
-import com.rmp.emvnfcdemo.ui.UiAction
-import com.rmp.emvnfcdemo.ui.UiController
+import com.rmp.mobiPos.data.Amount
+import com.rmp.mobiPos.data.Currency
+import com.rmp.mobiPos.data.TransactionData
+import com.rmp.mobiPos.data.TransactionType
+import com.rmp.mobiPos.data.toTrack2
+import com.rmp.mobiPos.transaction.cardreader.CardReaderIpml
+import com.rmp.mobiPos.ui.UiAction
+import com.rmp.mobiPos.ui.UiController
 import com.rmp.secure.SecureEngine
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -323,6 +325,7 @@ class EmvProcess(
         return true
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     private suspend fun showPinEntry(): PinEntryStatus {
         uiController.showPinEntryScreen()
         val pinResult = secureEngine.getPinEntry().showPinEntry(transactionData.pan!!)

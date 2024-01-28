@@ -1,4 +1,4 @@
-package com.rmp.emvnfcdemo.ui.fragment
+package com.rmp.mobiPos.ui.fragment
 
 import android.os.Bundle
 import android.util.Log
@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.rmp.emvnfcdemo.R
-import com.rmp.emvnfcdemo.data.Amount
-import com.rmp.emvnfcdemo.data.Currency
+import com.rmp.mobiPos.data.Amount
+import com.rmp.mobiPos.data.Currency
 import android.widget.AdapterView
 
 import android.widget.ArrayAdapter
@@ -48,7 +48,7 @@ class AmountEntryFragment(
 
         view.findViewById<Spinner>(R.id.sp_currency).apply {
             setAdapter(adapter)
-            setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
+            onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
                 override fun onItemSelected(
                     parent: AdapterView<*>?,
                     view: View,
@@ -59,7 +59,7 @@ class AmountEntryFragment(
                 }
 
                 override fun onNothingSelected(parent: AdapterView<*>?) {}
-            })
+            }
         }
 
 

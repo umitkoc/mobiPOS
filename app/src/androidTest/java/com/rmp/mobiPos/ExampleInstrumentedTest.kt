@@ -1,4 +1,4 @@
-package com.rmp.emvnfcdemo
+package com.rmp.mobiPos
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

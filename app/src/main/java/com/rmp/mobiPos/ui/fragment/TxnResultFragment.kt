@@ -1,19 +1,14 @@
-package com.rmp.emvnfcdemo.ui.fragment
+package com.rmp.mobiPos.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.TextureView
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.rmp.emvnfcdemo.R
-import com.rmp.emvnfcdemo.ui.UiAction
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import com.rmp.mobiPos.ui.UiAction
 import java.util.*
 
 class TxnResultFragment(

@@ -1,9 +1,9 @@
-package com.rmp.emvnfcdemo.ui
+package com.rmp.mobiPos.ui
 
 import com.rmp.emvengine.data.TransactionDecision
-import com.rmp.emvnfcdemo.data.Amount
-import com.rmp.emvnfcdemo.data.Currency
-import com.rmp.emvnfcdemo.data.TransactionType
+import com.rmp.mobiPos.data.Amount
+import com.rmp.mobiPos.data.Currency
+import com.rmp.mobiPos.data.TransactionType
 
 interface UiController {
 

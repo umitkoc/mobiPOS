@@ -1,5 +1,6 @@
-package com.rmp.emvnfcdemo
+package com.rmp.mobiPos
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.net.Uri
@@ -7,7 +8,9 @@ import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
 import androidx.appcompat.app.AppCompatActivity
+import com.rmp.emvnfcdemo.R
 
+@SuppressLint("CustomSplashScreen")
 class SplashActivity:  AppCompatActivity() {
 
     private val CODE_DRAW_OVER_OTHER_APP_PERMISSION = 0
@@ -35,18 +38,19 @@ class SplashActivity:  AppCompatActivity() {
             )
             startActivityForResult(intent, CODE_DRAW_OVER_OTHER_APP_PERMISSION)
         } else {
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
         }
 
 
     }
 
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (requestCode == CODE_DRAW_OVER_OTHER_APP_PERMISSION) {
 
             if (resultCode == Activity.RESULT_OK) {
-                startActivity(Intent(this,MainActivity::class.java))
+                startActivity(Intent(this, MainActivity::class.java))
             } else {
                 // do something to notify
             }

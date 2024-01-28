@@ -1,4 +1,4 @@
-package com.rmp.emvnfcdemo.ui.fragment
+package com.rmp.mobiPos.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.rmp.emvnfcdemo.R
-import com.rmp.emvnfcdemo.ui.UiAction
+import com.rmp.mobiPos.ui.UiAction
 import java.util.*
 
 class ErrorFragment(private val title: String, private val timeout: Long,    private val cb: (UiAction) -> Unit) : Fragment() {

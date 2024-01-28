@@ -1,4 +1,4 @@
-package com.rmp.emvnfcdemo.ui.fragment
+package com.rmp.mobiPos.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater

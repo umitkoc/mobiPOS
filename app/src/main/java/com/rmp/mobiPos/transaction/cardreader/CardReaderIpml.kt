@@ -1,4 +1,4 @@
-package com.rmp.emvnfcdemo.transaction.cardreader
+package com.rmp.mobiPos.transaction.cardreader
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -36,16 +36,13 @@ class CardReaderIpml(private val activity: Activity) : CardReader {
         flags = flags or NfcAdapter.FLAG_READER_NFC_F
         flags = flags or NfcAdapter.FLAG_READER_NFC_V
 
-        nfcAdapter.enableReaderMode(activity, object : NfcAdapter.ReaderCallback {
-            @SuppressLint("NewApi")
-            override fun onTagDiscovered(tag: Tag?) {
-                Log.d(TAG, "tag = $tag")
-                if(!_isCardIn){
-                    isoDep = IsoDep.get(tag)
-                    isoDep?.connect()
-                    _isCardIn = true
-                    channel.trySend(true)
-                }
+        nfcAdapter.enableReaderMode(activity, { tag ->
+            Log.d(TAG, "tag = $tag")
+            if(!_isCardIn){
+                isoDep = IsoDep.get(tag)
+                isoDep?.connect()
+                _isCardIn = true
+                channel.trySend(true)
             }
         }, flags, opts)
         ioScope.launch {

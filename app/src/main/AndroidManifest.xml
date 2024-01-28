@@ -13,10 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EMVNfcDemo">
         <activity
-            android:name=".MainActivity">
+            android:name="com.rmp.mobiPos.MainActivity">
 
         </activity>
-        <activity android:name=".SplashActivity"
+        <activity android:name="com.rmp.mobiPos.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

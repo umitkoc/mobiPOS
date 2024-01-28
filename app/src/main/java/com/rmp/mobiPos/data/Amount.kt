@@ -1,4 +1,4 @@
-package com.rmp.emvnfcdemo.data
+package com.rmp.mobiPos.data
 
 data class Amount (
     val value: Long,
