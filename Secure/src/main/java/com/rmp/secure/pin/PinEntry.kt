@@ -3,10 +3,12 @@ package com.rmp.secure.pin
 import android.content.Context
 import android.content.Context.WINDOW_SERVICE
 import android.graphics.PixelFormat
+import android.os.Build
 import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import android.widget.TextView
+import androidx.annotation.RequiresApi
 import com.rmp.secure.R
 import com.rmp.secure.common.hexToByteArray
 import kotlinx.coroutines.CoroutineScope
@@ -20,6 +22,7 @@ class PinEntry(private val context: Context) {
 
     private var pinEntryCloser: (() -> Unit)? = null
 
+    @RequiresApi(Build.VERSION_CODES.O)
     suspend fun showPinEntry(
         pan: String,
         bypassAllows: Boolean = true,
